@@ -1,5 +1,5 @@
 
-# Beem
+# beam
 
 A very simple bookmark search tool. 
 
@@ -7,7 +7,7 @@ At work there are lots of links e.g varous projects jira / conflunce sites that 
 
 The core of the application is the ability to use the browsers search interface to access the bookmarks. 
 
-By configuring beem as an additional search engine I can do `beem project name` and if its there is only 1 url for that search term I will be redirected to it otherwise I will see the a list of search results for that term 
+By configuring beam as an additional search engine I can do `beam project name` and if its there is only 1 url for that search term I will be redirected to it otherwise I will see the a list of search results for that term 
 
 **Authentication:** Github 
 The current application authenticates all uses using github Oauth. Users can make their site private to themself (default) or choose to make it public for all users to see. 
@@ -36,11 +36,11 @@ In your Browser of choice e.g Firefox cick on settings
 
 Go to manage search settings and add a new search engine
 
-Give the name of the search engine e.g `beem-search`
+Give the name of the search engine e.g `beam-search`
 
 The url will be `https://<YOUR SITE>/search?q=%s`
 
-Set the keyword to be something like `beem`
+Set the keyword to be something like `beam`
 
 ## Configuring Authentication
 In Github go to Settings and click on Developer settings
