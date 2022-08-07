@@ -34,7 +34,6 @@ func (se *SearchEngine) IndexDocument(doc *Site) {
 func (se *SearchEngine) Search(queryStr string) []*Site {
 	sites := []*Site{}
 	query := bleve.NewFuzzyQuery(queryStr)
-
 	searchRequest := bleve.NewSearchRequest(query)
 	searchRequest.Size = 30
 	searchResult, _ := se.index.Search(searchRequest)
