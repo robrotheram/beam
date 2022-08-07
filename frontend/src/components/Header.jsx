@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "preact/hooks"
 import { AddSiteModel } from "./AddSiteModel"
 import { Avatar } from "./Avatar";
-import logo from "./lighthouse.svg"
+import logo from "../assets/lighthouse.svg"
 import useDarkMode from "./useDarkMode";
 
 

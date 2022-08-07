@@ -115,10 +115,13 @@ func GitHubAuth(config *Config) gin.HandlerFunc {
 			session.Set("state", nil)
 			ctx.Next()
 		}
-		if session.Get("state") == nil {
-			ctx.Redirect(http.StatusTemporaryRedirect, LoginRedirect(ctx))
-			return
-		}
+		//if session.Get("state") == nil {
+		ctx.Redirect(http.StatusTemporaryRedirect, LoginRedirect(ctx))
+		return
+		//}
+
+		//fmt.Println(session.Get())
+
 		ctx.AbortWithError(http.StatusBadRequest, fmt.Errorf("Failed to get user"))
 	}
 }

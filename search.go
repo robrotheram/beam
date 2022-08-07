@@ -33,8 +33,10 @@ func (se *SearchEngine) IndexDocument(doc *Site) {
 
 func (se *SearchEngine) Search(queryStr string) []*Site {
 	sites := []*Site{}
-	query := bleve.NewQueryStringQuery(queryStr)
+	query := bleve.NewFuzzyQuery(queryStr)
+
 	searchRequest := bleve.NewSearchRequest(query)
+	searchRequest.Size = 30
 	searchResult, _ := se.index.Search(searchRequest)
 	for _, hit := range searchResult.Hits {
 		raw, _ := se.index.GetInternal([]byte(hit.ID))

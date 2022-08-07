@@ -3,3 +3,4 @@ node_modules
 dist
 clientid.github.json
 app.env
+__debug_bin

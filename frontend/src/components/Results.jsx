@@ -1,12 +1,13 @@
+import staticImg from "../assets/static.svg"
 const Result = ({site}) => {
     return (
-        <a href={site.URL} className=" w-full lg:max-w-full lg:flex m-5 lg:m-0 lg:my-5 hover:shadow-md">
+        <a href={site.URL} className=" w-full lg:max-w-full lg:flex m-5 lg:m-0 lg:my-5 hover:shadow-lg border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 dark:border-blacks-400 lg:rounded-md ">
             <img 
-                className="h-48 lg:h-auto  w-full sm:lg:w-56 object-cover flex-none object-center bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-                src={site.Image}
+                className="h-48 lg:h-auto  w-full sm:lg:w-56 object-cover flex-none object-center bg-cover rounded-l-md lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+                src={site.Image ? site.Image : staticImg}
             />
             <div
-                className="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white dark:border-blacks-400  dark:bg-blacks-600 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                className="w-full  bg-white  dark:bg-blacks-600 p-4 flex flex-col justify-between leading-normal lg:rounded-md">
                 <div className="mb-8">
                     <div className="text-gray-900 dark:text-white font-bold text-xl mb-2">
                         {site.Title}
